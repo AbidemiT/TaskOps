@@ -27,8 +27,10 @@
       toggle(){
         if(this.tog === "sm-menu") {
           this.tog = this.cancel;
+          this.$emit('sidebarStatus',this.tog);
         } else {
           this.tog = this.sm;
+          this.$emit('sidebarStatus',this.tog);
         }
       }
     }

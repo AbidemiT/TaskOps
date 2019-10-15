@@ -1,5 +1,6 @@
 @import "./variables";
 @import "./elements/navbar";
+@import "./elements/sidebar";
 @import "./index";
 @import "./login";
 
@@ -52,9 +53,15 @@ body {
 
 a {
   text-decoration: none;
+  color: $black;
 }
 
 img {
   width: 100%;
   object-fit: cover;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
