@@ -5,7 +5,7 @@
       <li><nuxt-link to="/login">Login</nuxt-link></li>
       <li><nuxt-link class="cta-outline" to="/signup">Get Started</nuxt-link></li>
     </ul>
-    <div class="sm-menu">
+    <div :class="tog" @click="toggle">
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>
@@ -15,7 +15,23 @@
 
 <script>
   export default {
-    name: "Navbar"
+    name: "Navbar",
+    data(){
+      return {
+        sm: "sm-menu",
+        cancel: "cancel",
+        tog: "sm-menu"
+      }
+    },
+    methods: {
+      toggle(){
+        if(this.tog === "sm-menu") {
+          this.tog = this.cancel;
+        } else {
+          this.tog = this.sm;
+        }
+      }
+    }
   }
 </script>
 

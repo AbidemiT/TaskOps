@@ -25,6 +25,34 @@
       background: $black;
       margin: 8px;
       border-radius: 20px;
+      @include easeOut;
+    }
+  }
+  .cancel {
+    cursor: pointer;
+    @include transit;
+
+    .line {
+      width: 35px;
+      padding: 2px;
+      background: $black;
+      margin: 8px;
+      border-radius: 20px;
+      &:first-child {
+        transform: rotate(50deg);
+        margin-bottom: -13px;
+        @include easeIn;
+
+      }
+      &:nth-child(2) {
+        visibility: hidden;
+        @include easeIn;
+      }
+      &:last-child {
+        transform: rotate(-50deg);
+        margin-top: -11px;
+        @include easeIn;
+      }
     }
   }
 }
@@ -71,6 +99,9 @@
       }
     }
     .sm-menu {
+      display: none;
+    }
+    .cancel {
       display: none;
     }
   }

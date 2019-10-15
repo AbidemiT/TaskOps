@@ -10,6 +10,12 @@ $black: #000;
 @mixin transit {
   transition: all .5s ease-in-out;
 }
+@mixin easeOut {
+  transition: all .3s ease-out;
+}
+@mixin easeIn {
+  transition: all .2s ease-in;
+}
 
 @mixin sm {
   @media(min-width: 411px) {
