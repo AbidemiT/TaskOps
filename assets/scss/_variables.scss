@@ -1,0 +1,39 @@
+$purple:#1C105A;
+$tomato: #EF4369;
+$grey:#f0f0f0;
+$white: #fff;
+$yellow: #FF9C00;
+$dark-yellow: darken($yellow, 5%);
+$cream: #FFD28E;
+$black: #000;
+
+@mixin transit {
+  transition: all .5s ease-in-out;
+}
+
+@mixin sm {
+  @media(min-width: 411px) {
+    @content;
+  }
+}
+@mixin md {
+  @media(min-width: 768px) {
+    @content;
+  }
+}
+@mixin ipad {
+  @media(min-width: 1024px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media(min-width: 1200px) {
+    @content;
+  }
+}
+@mixin xl {
+  @media(min-width: 1201px) {
+    @content;
+  }
+}
+
