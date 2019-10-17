@@ -7,7 +7,7 @@
       <form @submit.prevent="validateForm">
         <div class="input-block">
           <label for="name">Full Name</label>
-          <input type="text" placeholder="Enter your fullname" required>
+          <input type="text" placeholder="Enter your full name" required>
         </div>
         <div class="input-block">
           <label for="email">Email</label>
@@ -43,14 +43,13 @@ export default {
   methods: {
     validateForm() {
       if (!this.password) {
-        this.error = !this.error;
+       return this.error = true;
       }
 
       if (this.password !== this.cpassword) {
-        this.errMessage = !this.errMessage;
-      } else {
-        this.$router.push('/user/me');
+        return this.errMessage = true;
       }
+        this.$router.push('/user/me');
     },
     clear() {
       if (this.password) {

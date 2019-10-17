@@ -43,10 +43,12 @@
       padding: 10px;
       border: none;
       width: 100%;
+      outline: none;
 
       &:hover {
         background: $dark-yellow;
         color: $white;
+        outline: none;
         @include transit;
       }
     }
@@ -72,6 +74,8 @@
     border-radius: 10px;
 
     form {
+      width: 100%;
+
       .input-block {
         margin: 10px 0;
 
@@ -81,7 +85,7 @@
 
         input {
           height: 40px;
-          min-width: 200px;
+          min-width: 100%;
           border-radius: 5px;
           border: 1px solid $grey;
           outline: none;
@@ -131,6 +135,8 @@
     border-radius: 10px;
 
     form {
+      width: 100%;
+
       .input-block {
         margin: 10px 0;
 
@@ -140,7 +146,7 @@
 
         input {
           height: 40px;
-          min-width: 200px;
+          min-width: 100%;
           border-radius: 5px;
           border: 1px solid $grey;
           outline: none;
