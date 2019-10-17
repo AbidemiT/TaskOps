@@ -7,6 +7,8 @@
   border-radius: 10px;
 
   form {
+    width: 100%;
+
     .input-block {
       margin: 10px 0;
 
@@ -16,7 +18,7 @@
 
       input {
         height: 40px;
-        min-width: 200px;
+        min-width: 100%;
         border-radius: 5px;
         border: 1px solid $grey;
         outline: none;
@@ -26,6 +28,10 @@
           border: 1px solid $yellow;
           @include transit;
         }
+      }
+      .isErr {
+        border:1px solid rgba(255, 0, 0, 0.795);
+        transition: all .3s ease-in;
       }
     }
 

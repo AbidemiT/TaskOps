@@ -4,7 +4,7 @@
       <div class="heading">
         <h2>SIGNUP</h2>
       </div>
-      <form>
+      <form @submit.prevent="validateForm">
         <div class="input-block">
           <label for="name">Full Name</label>
           <input type="text" placeholder="Enter your fullname" required>
@@ -15,8 +15,13 @@
         </div>
         <div class="input-block">
           <label for="password">Password</label>
-          <input type="password" placeholder="Enter password" required>
+          <input :class="{isErr:error}" type="password" placeholder="Enter password" v-model="password" @keyup="clear">
         </div>
+        <div class="input-block">
+          <label for="password">Confirm Password</label>
+          <input type="password" placeholder="Confirm password" v-model="cpassword">
+        </div>
+        <small class="error" v-if="errMessage">Passwords doesn't match</small>
         <button>Signup</button>
       </form>
       <small>Already a user? <nuxt-link to="/login">Login</nuxt-link></small>
@@ -27,11 +32,40 @@
 <script>
 
 export default {
+  data() {
+    return {
+      password: "",
+      cpassword: "",
+      error: false,
+      errMessage: false,
+    }
+  },
+  methods: {
+    validateForm() {
+      if (!this.password) {
+        this.error = !this.error;
+      }
 
+      if (this.password !== this.cpassword) {
+        this.errMessage = !this.errMessage;
+      } else {
+        this.$router.push('/user/me');
+      }
+    },
+    clear() {
+      if (this.password) {
+        this.error = false;
+      } else {
+        this.error = true;
+      }
+    }
+  }
 }
 </script>
 
-<style>
-
-
+<style scoped>
+  .error {
+    color: red;
+    /* font-size: .8rem; */
+  }
 </style>
