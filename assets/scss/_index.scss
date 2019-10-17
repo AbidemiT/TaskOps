@@ -35,6 +35,53 @@
   }
 }
 
+#process {
+  margin: 40px 0;
+  padding: 10px;
+
+  .heading {
+    h1 {
+      text-align: center;
+      text-transform: uppercase;
+      font-family: DINPro-Bold;
+      font-weight: 700;
+      font-size: 2rem;
+      padding: 20px;
+    }
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+
+    .card {
+      margin: 20px;
+
+      .card_image {
+        width: 150px;
+        margin: 0 auto;
+      }
+
+      .card_title {
+        margin: 10px 0;
+
+        h3 {
+          font-family: DINPro-Medium;
+          text-align: center;
+          font-size: 1.2rem;
+        }
+      }
+      .card_content {
+        p {
+          font-family: DINPro-Light;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
 @include md {
   .landing {
     display: grid;
@@ -73,7 +120,104 @@
       margin: 20px 0;
     }
   }
+  #process {
+    margin: 40px 0;
+    padding: 10px;
+  
+    .heading {
+      h1 {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: DINPro-Bold;
+        font-weight: 700;
+        font-size: 2rem;
+        padding: 20px;
+      }
+    }
+  
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 10px;
+  
+      .card {
+        margin: 20px;
+  
+        .card_image {
+          width: 150px;
+          margin: 0 auto;
+        }
+  
+        .card_title {
+          margin: 10px 0;
+  
+          h3 {
+            font-family: DINPro-Medium;
+            text-align: center;
+            font-size: 1.2rem;
+          }
+        }
+        .card_content {
+          p {
+            font-family: DINPro-Light;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
 }
+@include ipad {
+  #process {
+    margin: 40px 0;
+    padding: 10px;
+  
+    .heading {
+      h1 {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: DINPro-Bold;
+        font-weight: 700;
+        font-size: 2rem;
+        padding: 20px;
+      }
+    }
+  
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 10px;
+  
+      .card {
+        margin: 20px;
+  
+        .card_image {
+          width: 150px;
+          margin: 0 auto;
+        }
+  
+        .card_title {
+          margin: 10px 0;
+  
+          h3 {
+            font-family: DINPro-Medium;
+            text-align: center;
+            font-size: 1.5rem;
+          }
+        }
+        .card_content {
+          p {
+            font-family: DINPro-Light;
+            text-align: center;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
 
 @include lg {
   .landing {
@@ -112,6 +256,53 @@
 
     .img-container {
       order: 2;
+    }
+  }
+
+  #process {
+    padding: 10px;
+  
+    .heading {
+      h1 {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: DINPro-Bold;
+        font-weight: 700;
+        font-size: 2rem;
+        padding: 20px;
+      }
+    }
+  
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-gap: 10px;
+  
+      .card {
+        margin: 20px;
+  
+        .card_image {
+          width: 150px;
+          margin: 0 auto;
+        }
+  
+        .card_title {
+          margin: 10px 0;
+  
+          h3 {
+            font-family: DINPro-Medium;
+            text-align: center;
+            font-size: 1.5rem;
+          }
+        }
+        .card_content {
+          p {
+            font-family: DINPro-Light;
+            text-align: center;
+            font-size: 1.3rem;
+          }
+        }
+      }
     }
   }
 }

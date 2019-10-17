@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Profile Page </h1>
+    <h1>{{$route.params.me}} Profile Page</h1>
   </div>
 </template>
 
