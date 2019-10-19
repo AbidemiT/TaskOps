@@ -12,21 +12,21 @@
     <section id="process">
       <div class="heading"><h1>Due Process</h1></div>
       <div class="cards">
-        <div class="card">
-          <div class="card_image"><img src="../assets/icons/list.svg" alt="Add Task SVG"></div>
-          <div class="card_title"><h3>Add Task</h3></div>
-          <div class="card_content"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non inventore, blanditiis qui repudiandae veritatis molestias doloremque dolorem vitae facilis!</p></div>
+        <div class="card" v-for="(card,i) in cards" :key="i">
+          <div class="card_image"><img :src="card.img" :alt="card.alter"></div>
+          <div class="card_title"><h3>{{card.title}}</h3></div>
+          <div class="card_content"><p>{{card.content}}</p></div>
         </div>
-        <div class="card">
+        <!-- <div class="card">
           <div class="card_image"><img src="../assets/icons/list-process.svg" alt="Task in process SVG"></div>
           <div class="card_title"><h3>Track Task</h3></div>
           <div class="card_content"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non inventore, blanditiis qui repudiandae veritatis molestias doloremque dolorem vitae facilis!</p></div>
         </div>
         <div class="card">
           <div class="card_image"><img src="../assets/icons/list-completed.svg" alt="Task Completed SVG"></div>
-          <div class="card_title"><h3>Completed Task</h3></div>
+          <div class="card_title"><h3>Update Task</h3></div>
           <div class="card_content"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non inventore, blanditiis qui repudiandae veritatis molestias doloremque dolorem vitae facilis!</p></div>
-        </div>
+        </div> -->
       </div>
     </section>
   </div>
@@ -35,7 +35,15 @@
 <script>
 
 export default {
-
+  data() {
+    return {
+      cards:[
+        {img:'../../icons/list.svg',alter:'Add Task SVG',title:'Add Task',content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non inventore, blanditiis qui repudiandae veritatis molestias doloremque dolorem vitae facilis!'},
+        {img:'~/../assets/icons/list-process.svg',alter:'Task in process SVG',title:'Track Task',content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non inventore, blanditiis qui repudiandae veritatis molestias doloremque dolorem vitae facilis!'},
+        {img:'../assets/icons/list-completed.svg',alter:'Task Completed SVG',title:'Update Task',content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi non inventore, blanditiis qui repudiandae veritatis molestias doloremque dolorem vitae facilis!'},
+        ]
+    }
+  }
 }
 </script>
 

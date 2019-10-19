@@ -5,6 +5,7 @@
   background: $white;
   padding: 20px;
   border-radius: 10px;
+  @include bShadow;
 
   form {
     width: 100%;

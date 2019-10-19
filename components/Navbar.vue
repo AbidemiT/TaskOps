@@ -5,7 +5,7 @@
       <li><nuxt-link to="/login">Login</nuxt-link></li>
       <li><nuxt-link class="cta-outline" to="/signup">Get Started</nuxt-link></li>
     </ul>
-    <div :class="tog" @click="toggle">
+    <div :class="tog" @click="toggle()">
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>

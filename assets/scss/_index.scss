@@ -284,6 +284,9 @@
         .card_image {
           width: 150px;
           margin: 0 auto;
+           img {
+            @include bShadow;
+           }
         }
   
         .card_title {

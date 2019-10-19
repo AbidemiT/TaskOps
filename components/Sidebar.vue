@@ -1,8 +1,7 @@
 <template>
   <div class="sidebar">
     <ul class="sidebar-menu">
-      <li><nuxt-link to="/login">Login</nuxt-link></li>
-      <li><nuxt-link to="/signup">Get Started</nuxt-link></li>
+      <li v-for="(menu,i) in menus" :key="i"><nuxt-link :to='menu.route'>{{menu.name}}</nuxt-link></li>
     </ul>
   </div>
 </template>
@@ -10,6 +9,17 @@
 <script>
   export default {
     name: "Sidebar",
+    data() {
+      return {
+        status: "",
+        menus: [
+          {route: '/login',name: 'Login'},
+          {route: '/signup', name: 'Get Started'},
+        ]
+      }
+    },
+    methods: {
+    }
   }
 </script>
 
