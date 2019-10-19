@@ -15,6 +15,7 @@
         menus: [
           {route: '/login',name: 'Login'},
           {route: '/signup', name: 'Get Started'},
+          {route: '/tasks', name: 'Tasks'}
         ]
       }
     },

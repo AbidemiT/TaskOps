@@ -2,6 +2,7 @@
   <div class="navbar">
     <div class="logo"><nuxt-link exact to="/">TaskOps</nuxt-link></div>
     <ul class="menu">
+      <li><nuxt-link to="/tasks">Tasks</nuxt-link></li>
       <li><nuxt-link to="/login">Login</nuxt-link></li>
       <li><nuxt-link class="cta-outline" to="/signup">Get Started</nuxt-link></li>
     </ul>

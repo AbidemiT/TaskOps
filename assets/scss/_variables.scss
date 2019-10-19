@@ -3,6 +3,7 @@ $green: #00B882;
 $tomato: #EF4369;
 $grey:#f0f0f0;
 $white: #fff;
+$tomato: tomato;
 $white-transparent: #fffffff7;
 $yellow: #FF9C00;
 $dark-yellow: darken($yellow, 5%);
@@ -48,4 +49,70 @@ $black: #000;
     @content;
   }
 }
+
+@keyframes On {
+    0% {
+      transform: translate(40px, 0);
+    }
+
+    50% {
+      transform: translate(20px, 0);
+    }
+
+    100% {
+      transform: translate(0,0);
+    }
+  }
+@keyframes Off {
+    0% {
+      transform: translate(-40px, 0);
+    }
+
+    50% {
+      transform: translate(-20px, 0);
+    }
+
+    100% {
+      transform: translate(0,0);
+    }
+  }
+
+@keyframes slideIn {
+    0% {
+      transform: translate(-100px,0);
+      background: $yellow;
+    }
+    25% {
+      transform: translate(-50px,0);
+      background: $yellow;
+    }
+
+    50% {
+      transform: translate(-20px,0);
+      background: $cream;
+    }
+
+    100% {
+      transform: translate(0,0);
+    }
+  }
+@keyframes slideOut {
+    0% {
+      transform: translate(100px,0);
+      background: $yellow;
+    }
+    25% {
+      transform: translate(50px,0);
+      background: $yellow;
+    }
+
+    50% {
+      transform: translate(20px,0);
+      background: $cream;
+    }
+
+    100% {
+      transform: translate(0,0);
+    }
+  }
 

@@ -6,26 +6,9 @@
   height: 90vh;
   overflow: hidden;
   animation: slideIn .5s linear;
+  z-index:1;
 
-  @keyframes slideIn {
-    0% {
-      transform: translate(-100px,0);
-      background: $yellow;
-    }
-    25% {
-      transform: translate(-50px,0);
-      background: $yellow;
-    }
-
-    50% {
-      transform: translate(-20px,0);
-      background: $cream;
-    }
-
-    100% {
-      transform: translate(0,0);
-    }
-  }
+  
 
   .sidebar-menu {
     width: 70%;
@@ -52,4 +35,7 @@
       }
     }
   }
+}
+.sidebar_out {
+  animation: slideOut .5s linear;
 }
