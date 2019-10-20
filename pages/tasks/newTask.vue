@@ -1,8 +1,9 @@
 <template>
   <div class="new_task">
         <div class="input_block">
-            <input type="text" placeholder="Enter new Task" @keyup.enter="addTask" v-model="inputValue" required/>
+            <input :class="{error: isErr}" type="text" placeholder="Enter new Task" @keyup.enter="addTask" v-model="inputValue"/>
             <button class="btn" @click="addTask">Add Task</button>
+            <small v-if="isErr">Can't Add an empty task</small>
         </div>
   </div>
 </template>
@@ -13,19 +14,28 @@ import { mapMutations } from 'vuex'
   export default {
       data() {
           return {
-              inputValue: ''
+              inputValue: '',
+              isErr: false
           }
       },
     methods: {
         addTask() {
-            this.$store.commit('tasks/add',this.inputValue)  
+            if(this.inputValue === ''){
+              this.isErr = !this.isErr;
+            } else {
+              this.$store.commit('tasks/add',this.inputValue)
             this.$router.push('/tasks')
+            }
         }
     }
   }
 </script>
 
 <style lang="scss" scoped>
+    small {
+      color: red;
+      text-align: center;
+    }
     .new_task {
         margin: 40px;
 
@@ -40,6 +50,9 @@ import { mapMutations } from 'vuex'
                 border: none;
                 outline: none;
                 border-radius: 5px;
+            }
+            .error {
+              border: 1px solid red;
             }
 
             .btn {
@@ -63,5 +76,5 @@ import { mapMutations } from 'vuex'
         }
     }
 
-    
+
 </style>

@@ -21,7 +21,8 @@
                     <span v-if="task.status" @click="toggle(task)" class="on"></span>
                     <span v-else class="off" @click="toggle(task)"></span>
                 </div>
-            </div></div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -33,7 +34,7 @@ import { mapState, mapMutations, mapGetters } from "vuex";
             ...mapState({
                 tasks: state => state.tasks.tasks
             }),
-            
+
             ...mapGetters({
                 complete: 'tasks/completed'
             })
